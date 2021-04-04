@@ -1,6 +1,6 @@
 const modales = () => {
 	const triggers = document.querySelectorAll('.popup__link'),
-		popup = document.querySelectorAll('.popup');
+		popups = document.querySelectorAll('.popup');
 
 	function getTrigger() {
 		triggers.forEach((item) => {
@@ -11,7 +11,7 @@ const modales = () => {
 		});
 	}
 	function getPopup() {
-		popup.forEach((item) => {
+		popups.forEach((item) => {
 			item.addEventListener('click', (e) => {
 				if (
 					e.target &&
@@ -32,7 +32,7 @@ const modales = () => {
 
 	function showModal(item) {
 		document.body.style.overflow = 'hidden';
-		popup.forEach((el) => {
+		popups.forEach((el) => {
 			if (el.classList.contains(`popup_${item}`)) {
 				el.classList.add('show');
 			}
