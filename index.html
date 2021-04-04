@@ -4,29 +4,74 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.css" />
 		<title>Modals</title>
 	</head>
 	<body>
-
 		<header class="header">
-			<div class="header__conteiner conteiner"></div>
-			<div class="header__logotype">
-				<a href="#" class="header__logo">LogoType</a>
-			</div>
-			<nav class="header__menu">
-				<a href="#" class="header__link">Home</a>
-				<a href="#" class="header__link">Page</a>
-				<a href="#" class="header__link">About</a>
-				<a href="#" class="header__link">Contacts</a>
-			</nav>
-			<div class="header__contcts">
-				<ul class="header__list">
-					<li><button class="header__item">Служба поддержки</button></li>
-					<li><button class="header__item"></button></li>
-				</ul>
+			<div class="header__conteiner conteiner">
+				<div class="header__logotype">
+					<a href="#" class="header__logo">LogoType</a>
+				</div>
+				<nav class="header__menu">
+					<a href="#" class="header__link">Home</a>
+					<a href="#" class="header__link">Page</a>
+					<a href="#" class="header__link">About</a>
+					<a href="#" class="header__link">Contacts</a>
+				</nav>
+				<div class="header__contcts">
+					<ul class="header__list">
+						<li><button class="header__item">Служба поддержки</button></li>
+						<li><button class="header__item"></button></li>
+					</ul>
+				</div>
 			</div>
 		</header>
+
+		<div class="popup">
+			<div class="popup__content">
+				<button class="popup__close">x</button>
+				<div class="popup__body">
+					<div class="popup__title">Первый попап</div>
+					<div class="popup__subtitle">Подзаголовок</div>
+					<div class="popup__descr">Описание</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup">
+			<div class="popup__content">
+				<button class="popup__close">x</button>
+				<div class="popup__body">
+					<form action="#" class="form-popup">
+						<div class="form-popup__row">
+							<label for="name">Ваше имя</label>
+							<input type="text" name="username" id="name" class="input" />
+						</div>
+						<div class="form-popup__row">
+							<label for="email">Ваше Email</label>
+							<input type="text" name="useremail" id="email" class="input" />
+						</div>
+						<div class="form-popup__row">
+							<label for="msg">Обращение</label>
+							<textarea name="msg" id="msg" class="input"></textarea>
+						</div>
+						<div class="form-popup__row">
+							<label for="chk"
+								><span class="input_check"
+									>Согласен на обработку своих данных</span
+								></label
+							>
+							<input
+								type="checkbox"
+								name="regulations"
+								id="chk"
+								class="input__checbox"
+							/>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 		<script src="js/index.js"></script>
 	</body>
 </html>

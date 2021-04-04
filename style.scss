@@ -1,0 +1,102 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(255, 255, 255);
+}
+
+.header {
+	// .header__conteiner
+
+	&__conteiner {
+	}
+
+	// .header__logotype
+
+	&__logotype {
+	}
+
+	// .header__logo
+
+	&__logo {
+	}
+
+	// .header__menu
+
+	&__menu {
+	}
+
+	// .header__link
+
+	&__link {
+	}
+
+	// .header__contcts
+
+	&__contcts {
+	}
+
+	// .header__list
+
+	&__list {
+	}
+
+	// .header__item
+
+	&__item {
+	}
+}
+.conteiner {
+	max-width: 1440px;
+}
+.popup {
+	// .popup__content
+
+	&__content {
+	}
+
+	// .popup__close
+
+	&__close {
+	}
+
+	// .popup__body
+
+	&__body {
+	}
+
+	// .popup__title
+
+	&__title {
+	}
+
+	// .popup__subtitle
+
+	&__subtitle {
+	}
+
+	// .popup__descr
+
+	&__descr {
+	}
+}
+.form-popup {
+	// .form-popup__row
+
+	&__row {
+	}
+}
+.input {
+	// .input_check
+
+	&_check {
+	}
+
+	// .input__checbox
+
+	&__checbox {
+	}
+}
