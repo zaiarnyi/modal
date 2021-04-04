@@ -4,6 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="css/style.css" />
 		<title>Modals</title>
 	</head>
@@ -14,64 +19,74 @@
 					<a href="#" class="header__logo">LogoType</a>
 				</div>
 				<nav class="header__menu">
-					<a href="#" class="header__link">Home</a>
-					<a href="#" class="header__link">Page</a>
-					<a href="#" class="header__link">About</a>
-					<a href="#" class="header__link">Contacts</a>
+					<a href="#" class="header__link"><span>Home</span></a>
+					<a href="#" class="header__link"><span>Page</span></a>
+					<a href="#" class="header__link"><span>About</span></a>
+					<a href="#" class="header__link"><span>Contacts</span></a>
 				</nav>
 				<div class="header__contcts">
 					<ul class="header__list">
 						<li><button class="header__item">Служба поддержки</button></li>
-						<li><button class="header__item"></button></li>
+						<li><button class="header__item">Написать нам письмо</button></li>
 					</ul>
 				</div>
 			</div>
 		</header>
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-		<div class="popup">
+		<div class="popup" >
 			<div class="popup__content">
-				<button class="popup__close">x</button>
+				<button class="popup__close"></button>
 				<div class="popup__body">
 					<div class="popup__title">Первый попап</div>
 					<div class="popup__subtitle">Подзаголовок</div>
-					<div class="popup__descr">Описание</div>
+					<div class="popup__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo impedit autem repellendus, mollitia itaque necessitatibus totam animi distinctio laudantium quasi labore ratione voluptate voluptatem neque quas fugit aut sint harum, numquam vitae. Doloribus officia delectus quaerat similique architecto, libero obcaecati eos fugit doloremque necessitatibus autem maiores animi asperiores repellendus recusandae?</div>
 				</div>
 			</div>
 		</div>
-		<div class="popup">
+		<!-- <div class="popup">
 			<div class="popup__content">
-				<button class="popup__close">x</button>
+				<button class="popup__close"></button>
 				<div class="popup__body">
 					<form action="#" class="form-popup">
 						<div class="form-popup__row">
-							<label for="name">Ваше имя</label>
 							<input type="text" name="username" id="name" class="input" />
+							<label for="name" class="form-popup__label">Ваше имя</label>
 						</div>
 						<div class="form-popup__row">
-							<label for="email">Ваше Email</label>
 							<input type="text" name="useremail" id="email" class="input" />
+							<label for="email" class="form-popup__label">Ваше Email</label>
 						</div>
 						<div class="form-popup__row">
-							<label for="msg">Обращение</label>
 							<textarea name="msg" id="msg" class="input"></textarea>
+							<label for="msg" class="form-popup__label">Обращение</label>
 						</div>
 						<div class="form-popup__row">
-							<label for="chk"
-								><span class="input_check"
-									>Согласен на обработку своих данных</span
-								></label
-							>
-							<input
-								type="checkbox"
-								name="regulations"
-								id="chk"
-								class="input__checbox"
-							/>
+							<label class="checkbox">
+								<input
+									type="checkbox"
+									value="1"
+									name="regulations"
+									id="chk"
+									class="checkbox__input"
+								/>
+								<span class="checkbox__text">
+									Согласен на обработку своих данных
+								</span>
+							</label>
+						</div>
+						<div class="form-popup__row">
+							<button class="btn">Отправить</button>
 						</div>
 					</form>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<script src="js/index.js"></script>
 	</body>
 </html>
+
+<label class="checkbox">
+<input type="checkbox" value="1" data-error="Error" name="form[]" class="checkbox__input" >
+<span class="checkbox__text"><span></span></span>
+</label>

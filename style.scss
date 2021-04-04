@@ -6,12 +6,18 @@
 
 body {
 	background-color: rgb(255, 255, 255);
+	font-family: 'Roboto', sans-serif;
 }
 
 .header {
+	background-color: black;
+	padding: 15px 0;
 	// .header__conteiner
 
 	&__conteiner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	// .header__logotype
@@ -22,6 +28,10 @@ body {
 	// .header__logo
 
 	&__logo {
+		text-decoration: none;
+		color: white;
+		text-transform: uppercase;
+		font-size: 24px;
 	}
 
 	// .header__menu
@@ -32,6 +42,32 @@ body {
 	// .header__link
 
 	&__link {
+		text-decoration: none;
+		color: white;
+		margin: 0 25px 0 0;
+		&:last-child {
+			margin: 0 0 0 0;
+		}
+		span {
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -2px;
+				left: 0;
+				width: 0;
+				height: 1px;
+				background-color: white;
+				transition: all 0.3s ease 0s;
+			}
+		}
+		&:hover {
+			span {
+				&::after {
+					width: 100%;
+				}
+			}
+		}
 	}
 
 	// .header__contcts
@@ -42,61 +78,179 @@ body {
 	// .header__list
 
 	&__list {
+		list-style: none;
+		li {
+			margin: 0 0 10px 0;
+			&:last-child {
+				margin: 0 0 0 0;
+			}
+		}
 	}
 
 	// .header__item
 
 	&__item {
+		background-color: transparent;
+		color: white;
+		outline: none;
+		border: none;
+		font-size: 16px;
+		cursor: pointer;
 	}
 }
 .conteiner {
 	max-width: 1440px;
+	margin: 0 auto;
 }
 .popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.35);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	// .popup__content
 
 	&__content {
+		position: relative;
+		max-width: 500px;
 	}
 
 	// .popup__close
 
 	&__close {
+		position: absolute;
+		right: -30px;
+		top: -30px;
+		width: 25px;
+		height: 25px;
+		background-color: transparent;
+		outline: transparent;
+		border: none;
+		cursor: pointer;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 352 512'%3E%3Cpath fill='%23fff' d='M243 256l100-100c12-12 12-32 0-45l-22-22a31 31 0 00-45 0L176 189 76 89a31 31 0 00-45 0L9 111a31 31 0 000 45l100 100L9 356a31 31 0 000 45l22 22c13 12 33 12 45 0l100-100 100 100c12 12 32 12 45 0l22-22c12-13 12-33 0-45L243 256z'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-size: contain;
 	}
 
 	// .popup__body
 
 	&__body {
+		background-color: #fff;
+		cursor: default;
+		padding: 25px;
+		border-radius: 20px;
 	}
 
 	// .popup__title
 
 	&__title {
+		font-size: 40px;
+		cursor: default;
+		margin: 0 0 15px 0;
 	}
 
 	// .popup__subtitle
 
 	&__subtitle {
+		font-size: 24px;
+		cursor: default;
+		margin: 0 0 30px 0;
 	}
 
 	// .popup__descr
 
 	&__descr {
+		font-size: 18px;
+		cursor: default;
 	}
 }
 .form-popup {
+	padding: 60px 40px 40px 40px;
 	// .form-popup__row
 
 	&__row {
+		position: relative;
+		margin: 0 0 35px 0;
+		&:last-child {
+			margin: 0 0 0 0;
+		}
+	}
+
+	&__label {
+		position: absolute;
+		top: 50%;
+		left: 10px;
+		transform: translate(0, -50%);
+		color: rgb(158, 157, 157);
+		transition: all 0.3s ease 0s;
+		cursor: text;
 	}
 }
 .input {
-	// .input_check
+	height: 40px;
+	border: 1px solid #ccc;
+	width: 100%;
+	border-radius: 10px;
+	outline: none;
+	padding: 0 10px;
+	color: rgb(158, 157, 157);
 
-	&_check {
+	&._focus + .form-popup__label {
+		top: -50%;
+		transform: translate(0, 0%);
+		color: black;
+		cursor: default;
 	}
-
-	// .input__checbox
-
-	&__checbox {
+}
+textarea.input {
+	padding: 10px 10px;
+	resize: none;
+	height: 80px;
+	&._focus + .form-popup__label {
+		top: -50%;
+		transform: translate(0, 100%);
+		color: black;
+		cursor: default;
+	}
+}
+.checkbox {
+	&__input {
+		appearance: none;
+		width: 1px;
+		height: 1px;
+		opacity: 0;
+		visibility: hidden;
+		&:checked + .checkbox__text {
+			&::before {
+				background-image: svg-url(
+					'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="12"><defs><path id="a" d="M496 1924l-8 7-4-4-2 2 6 7 10-10z"/></defs><use fill="#fff" xlink:href="#a" transform="translate(-482 -1924)"/></svg>'
+				);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+	&__text {
+		color: black;
+		position: relative;
+		padding: 0 0 0 30px;
+		cursor: pointer;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 15px;
+			height: 15px;
+			border: 1px solid #ccc;
+			transform: translate(0, -50%);
+			background: #fff;
+			border: 1px solid #a7a9ac;
+		}
 	}
 }

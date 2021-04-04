@@ -6,8 +6,222 @@
 
 body {
   background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  background-color: black;
+  padding: 15px 0;
+}
+
+.header__conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.header__link {
+  text-decoration: none;
+  color: white;
+  margin: 0 25px 0 0;
+}
+
+.header__link:last-child {
+  margin: 0 0 0 0;
+}
+
+.header__link span {
+  position: relative;
+}
+
+.header__link span::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: all 0.3s ease 0s;
+}
+
+.header__link:hover span::after {
+  width: 100%;
+}
+
+.header__list {
+  list-style: none;
+}
+
+.header__list li {
+  margin: 0 0 10px 0;
+}
+
+.header__list li:last-child {
+  margin: 0 0 0 0;
+}
+
+.header__item {
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .conteiner {
   max-width: 1440px;
+  margin: 0 auto;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__content {
+  position: relative;
+  max-width: 500px;
+}
+
+.popup__close {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  outline: transparent;
+  border: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 352 512'%3E%3Cpath fill='%23fff' d='M243 256l100-100c12-12 12-32 0-45l-22-22a31 31 0 00-45 0L176 189 76 89a31 31 0 00-45 0L9 111a31 31 0 000 45l100 100L9 356a31 31 0 000 45l22 22c13 12 33 12 45 0l100-100 100 100c12 12 32 12 45 0l22-22c12-13 12-33 0-45L243 256z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.popup__body {
+  background-color: #fff;
+  cursor: default;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.popup__title {
+  font-size: 40px;
+  cursor: default;
+  margin: 0 0 15px 0;
+}
+
+.popup__subtitle {
+  font-size: 24px;
+  cursor: default;
+  margin: 0 0 30px 0;
+}
+
+.popup__descr {
+  font-size: 18px;
+  cursor: default;
+}
+
+.form-popup {
+  padding: 60px 40px 40px 40px;
+}
+
+.form-popup__row {
+  position: relative;
+  margin: 0 0 35px 0;
+}
+
+.form-popup__row:last-child {
+  margin: 0 0 0 0;
+}
+
+.form-popup__label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+  color: #9e9d9d;
+  transition: all 0.3s ease 0s;
+  cursor: text;
+}
+
+.input {
+  height: 40px;
+  border: 1px solid #ccc;
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+  padding: 0 10px;
+  color: #9e9d9d;
+}
+
+.input._focus + .form-popup__label {
+  top: -50%;
+  transform: translate(0, 0%);
+  color: black;
+  cursor: default;
+}
+
+textarea.input {
+  padding: 10px 10px;
+  resize: none;
+  height: 80px;
+}
+
+textarea.input._focus + .form-popup__label {
+  top: -50%;
+  transform: translate(0, 100%);
+  color: black;
+  cursor: default;
+}
+
+.checkbox__input {
+  appearance: none;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.checkbox__input:checked + .checkbox__text::before {
+  background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="12"><defs><path id="a" d="M496 1924l-8 7-4-4-2 2 6 7 10-10z"/></defs><use fill="#fff" xlink:href="#a" transform="translate(-482 -1924)"/></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.checkbox__text {
+  color: black;
+  position: relative;
+  padding: 0 0 0 30px;
+  cursor: pointer;
+}
+
+.checkbox__text::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ccc;
+  transform: translate(0, -50%);
+  background: #fff;
+  border: 1px solid #a7a9ac;
 }
